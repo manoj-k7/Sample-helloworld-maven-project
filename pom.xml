@@ -34,18 +34,17 @@
                         <phase>package</phase>
                         <goals>
                             <goal>shade</goal>
-                        </goals>
-                        <configuration>
-                                <source>1.8</source>
-                                <target>1.8</target>
-                            </configuration>
+                        </goals>                                  
                             <transformers>
                                 <transformer
                                     implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <mainClass>hello.HelloWorld</mainClass>
                                 </transformer>
                             </transformers>
-                        </configuration>
+                        <configuration>
+                                <source>1.8</source>
+                                <target>1.8</target>
+                            </configuration>
                     </execution>
                 </executions>
             </plugin>
