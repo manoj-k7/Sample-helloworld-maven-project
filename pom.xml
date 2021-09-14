@@ -10,8 +10,8 @@
     <!-- tag::joda[] -->
      <properties>
            <java.version>1.8</java.version>
-           <maven.compiler.source>1.6</maven.compiler.source>
-           <maven.compiler.target>1.6</maven.compiler.target>
+           <maven.compiler.source>1.8</maven.compiler.source>
+           <maven.compiler.target>1.8</maven.compiler.target>
      </properties>
 
       <dependencies>
@@ -40,10 +40,7 @@
                                     implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                                     <mainClass>hello.HelloWorld</mainClass>
                                 </transformer>
-                            </transformers>
-                        <configuration>
-                                <source>1.8</source>
-                                <target>1.8</target>
+                            </transformers>                      
                             </configuration>
                     </execution>
                 </executions>
