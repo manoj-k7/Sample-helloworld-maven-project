@@ -16,6 +16,13 @@ pipeline {
                buildMaven()
             }
         }
+        stage('sonarqube analysis') {
+            def mvnHome = tool name : 'maven 3.8.2',type: 'maven'
+            withSonarQubeEnv('sonar-localost') {
+	            bat "${mvnHome}/bin/mvn sonar:sonar
+         }
+     }
+        
     }
 
 }
